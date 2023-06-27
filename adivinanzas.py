@@ -3,7 +3,7 @@ adivinaste = 0
 palabra_singular = "palabra"
 perdiste = 0
 user_option = ""
-palabras = ["perro", "gato","llave","corazon","patricio estrella","ballena"]
+palabras = ["perro", "gato","llave","corazon","patricio estrella","ballena","caracol","cangrejo","pikachu","trofeo","homero simpson"]
 
 nombre = input ("¿Como te llamas?\n")
 print (f"¡Hola {nombre}! Es hora de jugar a las adivinanzas.\n")
@@ -71,7 +71,41 @@ while (user_option != 3):
                     print("| un gigante majestuoso y muy corpulento.        |")
                     print("| ¿Quién es, de cola a cabeza, el más imponente? |")
                     print("|________________________________________________|")
-                
+
+                elif(palabra_secreta == "caracol"):
+                    print("_________________________________________________")
+                    print("|voy con mi casa al hombro, ando sin tener patas |")
+                    print("|y voy marcando mi huella con un hilito de plata.|")
+                    print("|¿Quien soy?                                     |")                                   
+                    print("|________________________________________________|")
+
+                elif(palabra_secreta == "cangrejo"):
+                    print("___________________________________")
+                    print("|Al ir parece que vengo y al venir |")
+                    print("|es que me voy                     |")
+                    print("|__________________________________|")
+
+                elif(palabra_secreta == "pikachu"):
+                    print("____________________________________________")
+                    print("|De colita rayada y mejillas amarillas,      |")
+                    print("|soy un pokémon eléctrico que brilla.        |")
+                    print("|¿quién soy?                                 |")
+                    print("|____________________________________________|")
+
+                elif(palabra_secreta == "trofeo"):
+                    print("______________________________________________")
+                    print("|Objeto brillante, símbolo de victoria,       |")
+                    print("|se otorga a aquellos que alcanzan la gloria. |")
+                    print("|Simbolo de fuerza y momentos inolvidables.   |")
+                    print("|_____________________________________________|")
+
+                elif(palabra_secreta == "homero simpson"):
+                    print("________________________________________________________")
+                    print("|Amante de la comida rápida y la holgazanería,         |")
+                    print("|su sabiduría es escasa, pero su corazón es de alegría.|")
+                    print("|Con su lema '¡D'oh!' es famoso por su error,          |")
+                    print("|¿quién es este padre de familia con mucho humor?      |")
+                    print("________________________________________________________")
                     
                 # Primer print con estado de la adivinanza
                 print("_ " * len(palabra_secreta))
@@ -190,6 +224,103 @@ while (user_option != 3):
                             print("▄█████▀█████▄──▄█")
                             print("███████▀████████▀")
                             print("─▄▄▄▄▄▄███████▀")
+
+                        if(palabra_secreta == "caracol"):
+                            print("__●__ ●")
+                            print(" _ █___█")
+                            print(" __ █__ █_")
+                            print(" __ █__ █")
+                            print(" __ ███____________█████ 　　　")
+                            print(" _█▒░░█_________██▓▒▒▓██ ☆")
+                            print(" █▒░●░░█___ ██▓▒██▓▒▒▓█　　 ★")
+                            print(" █░█▒░░██_ ██▓▒██▓▒░▒▓█")
+                            print(" _██▒░░██ ██▓▒░██▓▒░▒▓█ 　　　★")
+                            print(" ____█▒░██ ██▓▒░░ ████▓█")
+                            print(" ___█▒░██__██▓▓▒▒░░░██ 　 ★★")
+                            print(" ____█▒░██___████████████")
+                            print(" _____█▒░█▒▒▒▒▒▒▒▒▒▒▒▒█")
+                            print(" ______██████████████████.•°*”˜҈.•°*”˜҈.")
+
+                        if(palabra_secreta == "cangrejo"):
+                           print("░░▄█▀▀▀░░░░░░░░▀▀▀█▄")
+                           print("▄███▄▄░░▀▄██▄▀░░▄▄███▄")
+                           print("▀██▄▄▄▄████████▄▄▄▄██▀")
+                           print("░░▄▄▄▄██████████▄▄▄▄")
+                           print("░▐▐▀▐▀░▀██████▀░▀▌▀▌▌")
+
+                        if(palabra_secreta == "pikachu"):
+                           print("⠸⣷⣦⠤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⠀⠀⠀")
+                           print("⠀⠙⣿⡄⠈⠑⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠔⠊⠉⣿⡿⠁⠀⠀⠀")
+                           print("⠀⠀⠈⠣⡀⠀⠀⠑⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠊⠁⠀⠀⣰⠟⠀⠀⠀⣀⣀")
+                           print("⠀⠀⠀⠀⠈⠢⣄⠀⡈⠒⠊⠉⠁⠀⠈⠉⠑⠚⠀⠀⣀⠔⢊⣠⠤⠒⠊⠉⠀⡜")
+                           print("⠀⠀⠀⠀⠀⠀⠀⡽⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠩⡔⠊⠁⠀⠀⠀⠀⠀⠀⠇")
+                           print("⠀⠀⠀⠀⠀⠀⠀⡇⢠⡤⢄⠀⠀⠀⠀⠀⡠⢤⣄⠀⡇⠀⠀⠀⠀⠀⠀⠀⢰⠀")
+                           print("⠀⠀⠀⠀⠀⠀⢀⠇⠹⠿⠟⠀⠀⠤⠀⠀⠻⠿⠟⠀⣇⠀⠀⡀⠠⠄⠒⠊⠁⠀")
+                           print("⠀⠀⠀⠀⠀⠀⢸⣿⣿⡆⠀⠰⠤⠖⠦⠴⠀⢀⣶⣿⣿⠀⠙⢄⠀⠀⠀⠀⠀⠀")
+                           print("⠀⠀⠀⠀⠀⠀⠀⢻⣿⠃⠀⠀⠀⠀⠀⠀⠀⠈⠿⡿⠛⢄⠀⠀⠱⣄⠀⠀⠀⠀")
+                           print("⠀⠀⠀⠀⠀⠀⠀⢸⠈⠓⠦⠀⣀⣀⣀⠀⡠⠴⠊⠹⡞⣁⠤⠒⠉⠀⠀⠀⠀⠀")
+                           print("⠀⠀⠀⠀⠀⠀⣠⠃⠀⠀⠀⠀⡌⠉⠉⡤⠀⠀⠀⠀⢻⠿⠆⠀⠀⠀⠀⠀⠀⠀")
+                           print("⠀⠀⠀⠀⠀⠰⠁⡀⠀⠀⠀⠀⢸⠀⢰⠃⠀⠀⠀⢠⠀⢣⠀⠀⠀⠀⠀⠀⠀⠀")
+                           print("⠀⠀⠀⢶⣗⠧⡀⢳⠀⠀⠀⠀⢸⣀⣸⠀⠀⠀⢀⡜⠀⣸⢤⣶⠀⠀⠀⠀⠀⠀")
+                           print("⠀⠀⠀⠈⠻⣿⣦⣈⣧⡀⠀⠀⢸⣿⣿⠀⠀⢀⣼⡀⣨⣿⡿⠁⠀⠀⠀⠀⠀⠀")
+                           print("⠀⠀⠀⠀⠀⠈⠻⠿⠿⠓⠄⠤⠘⠉⠙⠤⢀⠾⠿⣿⠟⠋")
+
+                        if(palabra_secreta == "trofeo"):
+                           print("________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶ ")
+                           print("_______¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶ ")
+                           print("___¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶ ")
+                           print("_¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶ ")
+                           print("¶¶¶¶______¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_______¶¶¶¶ ")
+                           print("¶¶¶_______¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶________¶¶¶") 
+                           print("¶¶________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶________¶¶¶ ")
+                           print("¶¶¶_____¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶______¶¶¶ ")
+                           print("¶¶¶____¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶____¶¶¶¶ ")
+                           print("_¶¶¶___¶¶¶_¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_¶¶¶____¶¶¶ ")
+                           print("_¶¶¶¶___¶¶¶_¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_¶¶¶¶__¶¶¶¶ ")
+                           print("___¶¶¶¶__¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_¶¶¶¶¶ ")
+                           print("____¶¶¶¶¶¶¶¶_¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_¶¶¶¶¶¶¶¶¶ ")
+                           print("______¶¶¶¶¶¶__¶¶¶¶¶¶¶¶¶¶¶¶¶¶___¶¶¶¶¶¶ ")
+                           print("_______________¶¶¶¶¶¶¶¶¶¶¶¶ ")
+                           print("_________________¶¶¶¶¶¶¶¶ ")
+                           print("___________________¶¶¶¶ ")
+                           print("___________________¶¶¶¶") 
+                           print("___________________¶¶¶¶ ")
+                           print("___________________¶¶¶¶ ")
+                           print("_______________¶¶¶¶¶¶¶¶¶¶¶¶ ")
+                           print("____________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶ ")
+                           print("____________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶ ")
+                           print("____________¶¶¶____________¶¶¶ ")
+                           print("____________¶¶¶____________¶¶¶ ")
+                           print("____________¶¶¶____________¶¶¶ ")
+                           print("____________¶¶¶____________¶¶¶ ")
+                           print("____________¶¶¶____________¶¶¶ ")
+                           print("____________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶ ")
+                           print("____________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶ ")
+                           print("__________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶ ")
+                           print("_________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶")
+
+                        if (palabra_secreta == "homero simpson"):
+                           print("░░░░░░▄▄▄▄███▄▄▄▄░░░░░░░░░░░░░")
+                           print("░░░▄▄█▀░░░░░░░░░▀▀▄▄░░░░░░░░░░")
+                           print("░░█▀░░░░░░░░░░░░░░░▀█▄░░░░░░░░")
+                           print("░█▀░░░░░░░░░░░░░░░░░░█▄░░░░░░░")
+                           print("██░░░░░░░░░░░░░░░░░░░░█▄░░░░░░")
+                           print("█░░░░░░░░░░░░░░░░░░░░░░█▄░░░░░")
+                           print("██░░░░░░░░░░░░▄▄▄▄▄█▀▀▀██▄░░░░")
+                           print("▀█░░░░░░░░░▄█▀▀░░▀▀█▄░░░░█▄░░░")
+                           print("░█▄░▄░░░░░▄█░░░░░░░░█▄░█░░█░░░")
+                           print("░▄█▄██▄░░░█▄░░██░░░░██▄▄▄██░░░")
+                           print("░████░▀▀░░░█▄░░░░░░▄█░░░░░██░░")
+                           print("░█░░██▄▄░░░░▀██▄▄██▀▄▄▄▄▄▄█░░░")
+                           print("░░▄█▀░░░░░░░░░▄▄██▀▀▀▀▀▀▀░▀█▄░")
+                           print("░░▀█░░░░░░░▄█▀▀░░░░░░░░░░░░░█▄")
+                           print("░░░▀█▄▄█▀░█▀░░░░░░░░░░░░░░░▄█▀")
+                           print("░░░░░░██░▄█░░░█▀██▀▀█▀██▀▀▀▀░░")
+                           print("░░░░░▄█░░▀█░░▀█░█░░██░██░░░░░░")
+                           print("░░░░██▀█▄░▀█▄░▀▀████▀▀██░░░░░░")
+                           print("░░░░█░░░▀▀█▄▀█▄▄▄▄▄▄▄▄██▄░░░░")
+
+
                         break
         
                                          
