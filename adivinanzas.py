@@ -5,13 +5,14 @@ perdiste = 0
 user_option = ""
 
 nombre = input ("¿Como te llamas?\n")
-print (f"¡Hola {nombre}! Es hora de jugar a las adivinanzas.")
+print (f"¡Hola {nombre}! Es hora de jugar a las adivinanzas.\n")
+
 
 while (user_option != 3):
     print("[......ESCOGE UNA OPCIÓN:.......]\n")
     print("1. Quiero juga.")  
     print("2.Quiero saber los resultados")
-    print("3. salir")
+    print("3. salir\n\n")
     user_option = int (input())
 
     if (user_option == 1):
@@ -65,8 +66,6 @@ while (user_option != 3):
                 print("|________________________________________________|")
             
                 
-            
-            
             # Primer print con estado de la adivinanza
             print("_ " * len(palabra_secreta))
 
@@ -76,6 +75,9 @@ while (user_option != 3):
 
                 if letra_usuario == "":
                     continue
+
+                #si el usuario adivina la palabra de una:
+                
                 if letra_usuario in letras_adivinadas:
                     print("Ya has adivinado esa letra.")
                     continue
@@ -83,6 +85,78 @@ while (user_option != 3):
                 if letra_usuario in palabra_secreta:
                     letras_adivinadas.append(letra_usuario)
                     print("¡Correcto!")
+                    #si el usuario ingresa la palabra completa
+                    if len(letra_usuario)> 1:
+                        if (letra_usuario)== palabra_secreta:
+                            ("¡felicidades!")
+                            adivinaste = adivinaste  + 1
+
+                    if (palabra_secreta == "perro"):
+                        print("░░░░░░▄█▄█░░░░░▄░░░░░░")
+                        print("░░░░██████░░░░░░█░░░░░")
+                        print("░░░░░░███████████░░░░░")
+                        print("▒▒▒▒▒▒█▀▀█▀▀██▀██▒▒▒▒▒")
+                        print("▒▒▒▒▒▄█▒▄█▒▒▄█▒▄█▒▒▒▒▒")
+                    
+                    if (palabra_secreta == "gato"):
+                        print("░░░▄▀▌░▄▀▌░░░░░░░░░░░░")
+                        print("░▄██▀▀▀█▀▀▀▄╔╦╗╔╗╔╗╗╗╗")
+                        print("▐███░▐░█░▐░█║║║╠╝║║║║║")
+                        print("███████╥████╝╝╝╚╝╚╝╩╩╝")
+                        print("█████╚═╩═╝██░░░░░░░░░░")
+                    
+                    if (palabra_secreta == "llave"):
+                        print("──▄▀▀▀▄───────────────")
+                        print("──█───█───────────────")
+                        print("─███████─────────▄▀▀▄─")
+                        print("░██─▀─██░░█▀█▀▀▀▀█░░█░")
+                        print("░███▄███░░▀░▀░░░░░▀▀░░")
+
+                    if (palabra_secreta == "corazon"):
+                        print("─────▄█▀█▄──▄███▄────❤")
+                        print("────▐█░██████████▌────")
+                        print("─────██▒█████████─────")
+                        print("──────▀████████▀──────")
+                        print("─────────▀██▀─────────")
+                    
+                    if (palabra_secreta == "patricio_estrella"):
+                         print ("────────────────────██████──────────")
+                         print("──────────────────██▓▓▓▓▓▓██────────")
+                         print("────────────────██▓▓▓▓▒▒▒▒██────────")
+                         print("────────────────██▓▓▒▒▒▒▒▒██────────")
+                         print("──────────────██▓▓▓▓▒▒▒▒██──────────")
+                         print("──────────────██▓▓▒▒▒▒▒▒██──────────")
+                         print("────────────██▓▓▓▓▒▒▒▒▒▒██──────────")
+                         print("────────────████▒▒████▒▒██──────────")
+                         print("────────────██▓▓▒▒▒▒▒▒▒▒██──────────")
+                         print("──────────██────▒▒────▒▒██──────────")
+                         print("──────────████──▒▒██──▒▒██──────────")
+                         print("─────────██────▒▒────▒▒██──────────")
+                         print("──────────██▒▒▒▒▒▒▒▒▒▒▒▒██──────────")
+                         print("──────────████████████▒▒▒▒██────────")
+                         print("────────██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██──────")
+                         print("──────██▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒██────")
+                         print("────██▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒██──")
+                         print("──██▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒██")
+                         print("██▓▓▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒██")
+                         print("██▓▓▒▒▓▓▒▒▒▒▒▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒██")
+                         print("██▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓██")
+                         print("──████▐▌▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐▌▐▌████──")
+                         print("────██▐▌▐▌▌▌▌▌▌▌▌▌▐▌▐▌▐▌▐▌▌▌▐▌██────")
+                         print("────██▌▌▐▌▐▌▌▌▐▌▌▌▌▌▐▌▌▌▌▌▌▌▌▌██────")
+                         print("──────██▌▌▐▌▐▌▐▌▐▌▐▌▐▌▐▌▌▌▌▌██──────")
+                         print("──────██▐▌▐▌▐▌████████▐▌▌▌▌▌██──────")
+                         print("────────██▒▒██────────██▒▒██────────")
+                         print("────────██████────────██████────────")
+
+                    if(palabra_secreta == "ballena"):
+                         print("─────▀▄▀─────▄─────▄")
+                         print("──▄███████▄──▀██▄██▀")
+                         print("▄█████▀█████▄──▄█")
+                         print("███████▀████████▀")
+                         print("─▄▄▄▄▄▄███████▀")
+                    break    
+                  
                 else:
                     intentos -= 1
                     print("Incorrecto.")
@@ -91,6 +165,7 @@ while (user_option != 3):
                 # Verificar si el jugador perdió o no adivinó ninguna letra en esta vuelta
                 if len(letras_adivinadas) == 0:
                     continue
+                
 
                 if intentos == 0:
                     print(f"¡Has perdido! La palabra secreta era: {palabra_secreta}")
