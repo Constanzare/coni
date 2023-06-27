@@ -3,257 +3,194 @@ adivinaste = 0
 palabra_singular = "palabra"
 perdiste = 0
 user_option = ""
+palabras = ["perro", "gato","llave","corazon","patricio estrella","ballena"]
 
 nombre = input ("¿Como te llamas?\n")
 print (f"¡Hola {nombre}! Es hora de jugar a las adivinanzas.\n")
 
 
+
 while (user_option != 3):
     print("[......ESCOGE UNA OPCIÓN:.......]\n")
-    print("1. Quiero juga.")  
-    print("2.Quiero saber los resultados")
+    print("1. Quiero jugar.")  
+    print("2. Quiero saber los resultados")
     print("3. salir\n\n")
     user_option = int (input())
 
     if (user_option == 1):
-       
-            palabras = ["perro", "gato","llave","corazon","patricio estrella","ballena"]
-            palabra_secreta = random.choice(["perro","gato","llave", "corazon","patricio_estrella","ballena"])
-            intentos = 6
-            letras_adivinadas = []
-
-        
+            print("Tienes la opción de ingresar la palabra completa o adivinando las letras: ¡Tienes 6 intentos! ¡Suerte! ")
+            if len(palabras) == 0:
+                 print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                 print ("¡Felicidades! ¡Las adivinaste todas!  ")
+                 print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
             
-            if(palabra_secreta == "perro"):
-                print ("________________________________________ ")
-                print ("|Tiene patas, pero no puede caminar,    |")
-                print ("|tiene pelo, pero no es humano,         |")
-                print ("|ladra sin voz, pero comunica sin igual.|")
-                print ("| ¿Qué es este misterioso animal?       |")
-                print ("|_______________________________________|")
+            else:
+                print (f"Te quedan {len (palabras)} palabras por adivinar.")
+                palabra_secreta = random.choice(palabras)
+                intentos = 6
+                letras_adivinadas = []
 
-            elif(palabra_secreta == "gato"):
-                print("____________________________________________________________________________________________________ ")
-                print("|Silente y sigiloso, en la sombra se desliza, de noche es cazador y de día se echa largas siestas.  |")
-                print("|¿Qué misterioso felino es?                                                                         |")
-                print("|___________________________________________________________________________________________________|")
-            
-            elif(palabra_secreta == "llave"):
-                print("________________________________________________ ")
-                print("|No muerde ni ladra,                            |")
-                print("|pero tiene dientes y la casa guarda. ¿Qué es?  |")
-                print("|_______________________________________________|")
-
-            elif(palabra_secreta == "corazon"):
-                print("_____________________________________________________________________________________")
-                print("|Sin descanso trabaja, bombeando sin cesar, llevando vida a cada rincón sin parar.  |")
-                print("|¿Qué órgano incansable puede ser?                                                  |")
-                print("____________________________________________________________________________________|")
-            
-            elif(palabra_secreta == "patricio_estrella"):
-                print("___________________________________________  ")
-                print("|De color rosa y distraído sin igual,      |")
-                print("|vive bajo el mar en un hogar peculiar.    |")
-                print("|Amigo de Bob Esponja, siempre es leal.    |")
-                print("|¿Quién es este personaje especial?        |")
-                print("|__________________________________________|")
-
-            elif(palabra_secreta == "ballena"):
-                print("_________________________________________________ ")
-                print("| En el océano grande y azul,                    |")
-                print("| un gigante majestuoso y muy corpulento.        |")
-                print("| ¿Quién es, de cola a cabeza, el más imponente? |")
-                print("|________________________________________________|")
-            
                 
-            # Primer print con estado de la adivinanza
-            print("_ " * len(palabra_secreta))
+                if(palabra_secreta == "perro"):
+                    print ("________________________________________ ")
+                    print ("|Tiene patas, pero no puede caminar,    |")
+                    print ("|tiene pelo, pero no es humano,         |")
+                    print ("|ladra sin voz, pero comunica sin igual.|")
+                    print ("| ¿Qué es este misterioso animal?       |")
+                    print ("|_______________________________________|")
 
-            while True:
-                # Pedir una letra al jugador
-                letra_usuario = input("Ingresa una letra: ").lower().strip()
-
-                if letra_usuario == "":
-                    continue
-
-                #si el usuario adivina la palabra de una:
+                elif(palabra_secreta == "gato"):
+                    print("____________________________________________________________________________________________________ ")
+                    print("|Silente y sigiloso, en la sombra se desliza, de noche es cazador y de día se echa largas siestas.  |")
+                    print("|¿Qué misterioso felino es?                                                                         |")
+                    print("|___________________________________________________________________________________________________|")
                 
-                if letra_usuario in letras_adivinadas:
-                    print("Ya has adivinado esa letra.")
-                    continue
+                elif(palabra_secreta == "llave"):
+                    print("________________________________________________ ")
+                    print("|No muerde ni ladra,                            |")
+                    print("|pero tiene dientes y la casa guarda. ¿Qué es?  |")
+                    print("|_______________________________________________|")
 
-                if letra_usuario in palabra_secreta:
-                    letras_adivinadas.append(letra_usuario)
-                    print("¡Correcto!")
-                    #si el usuario ingresa la palabra completa
-                    if len(letra_usuario)> 1:
-                        if (letra_usuario)== palabra_secreta:
-                            ("¡felicidades!")
-                            adivinaste = adivinaste  + 1
+                elif(palabra_secreta == "corazon"):
+                    print("_____________________________________________________________________________________")
+                    print("|Sin descanso trabaja, bombeando sin cesar, llevando vida a cada rincón sin parar.  |")
+                    print("|¿Qué órgano incansable puede ser?                                                  |")
+                    print("____________________________________________________________________________________|")
+                
+                elif(palabra_secreta == "patricio estrella"):
+                    print("___________________________________________  ")
+                    print("|De color rosa y distraído sin igual,      |")
+                    print("|vive bajo el mar en un hogar peculiar.    |")
+                    print("|Amigo de Bob Esponja, siempre es leal.    |")
+                    print("|¿Quién es este personaje especial?        |")
+                    print("|__________________________________________|")
 
-                    if (palabra_secreta == "perro"):
-                        print("░░░░░░▄█▄█░░░░░▄░░░░░░")
-                        print("░░░░██████░░░░░░█░░░░░")
-                        print("░░░░░░███████████░░░░░")
-                        print("▒▒▒▒▒▒█▀▀█▀▀██▀██▒▒▒▒▒")
-                        print("▒▒▒▒▒▄█▒▄█▒▒▄█▒▄█▒▒▒▒▒")
+                elif(palabra_secreta == "ballena"):
+                    print("_________________________________________________ ")
+                    print("| En el océano grande y azul,                    |")
+                    print("| un gigante majestuoso y muy corpulento.        |")
+                    print("| ¿Quién es, de cola a cabeza, el más imponente? |")
+                    print("|________________________________________________|")
+                
                     
-                    if (palabra_secreta == "gato"):
-                        print("░░░▄▀▌░▄▀▌░░░░░░░░░░░░")
-                        print("░▄██▀▀▀█▀▀▀▄╔╦╗╔╗╔╗╗╗╗")
-                        print("▐███░▐░█░▐░█║║║╠╝║║║║║")
-                        print("███████╥████╝╝╝╚╝╚╝╩╩╝")
-                        print("█████╚═╩═╝██░░░░░░░░░░")
+                # Primer print con estado de la adivinanza
+                print("_ " * len(palabra_secreta))
+
+                while True:
+                    # Pedir una letra al jugador
+                    letra_usuario = input("Ingresa una letra: ").lower().strip()
+
+                    if letra_usuario == "":
+                        continue
+
+                    #si el usuario adivina la palabra de una:
                     
-                    if (palabra_secreta == "llave"):
-                        print("──▄▀▀▀▄───────────────")
-                        print("──█───█───────────────")
-                        print("─███████─────────▄▀▀▄─")
-                        print("░██─▀─██░░█▀█▀▀▀▀█░░█░")
-                        print("░███▄███░░▀░▀░░░░░▀▀░░")
+                    if letra_usuario in letras_adivinadas:
+                        print("Ya has adivinado esa letra.")
+                        continue
 
-                    if (palabra_secreta == "corazon"):
-                        print("─────▄█▀█▄──▄███▄────❤")
-                        print("────▐█░██████████▌────")
-                        print("─────██▒█████████─────")
-                        print("──────▀████████▀──────")
-                        print("─────────▀██▀─────────")
+                    if letra_usuario in palabra_secreta:
+                        letras_adivinadas.append(letra_usuario)
+                        print("¡Correcto!")
                     
-                    if (palabra_secreta == "patricio_estrella"):
-                         print ("────────────────────██████──────────")
-                         print("──────────────────██▓▓▓▓▓▓██────────")
-                         print("────────────────██▓▓▓▓▒▒▒▒██────────")
-                         print("────────────────██▓▓▒▒▒▒▒▒██────────")
-                         print("──────────────██▓▓▓▓▒▒▒▒██──────────")
-                         print("──────────────██▓▓▒▒▒▒▒▒██──────────")
-                         print("────────────██▓▓▓▓▒▒▒▒▒▒██──────────")
-                         print("────────────████▒▒████▒▒██──────────")
-                         print("────────────██▓▓▒▒▒▒▒▒▒▒██──────────")
-                         print("──────────██────▒▒────▒▒██──────────")
-                         print("──────────████──▒▒██──▒▒██──────────")
-                         print("─────────██────▒▒────▒▒██──────────")
-                         print("──────────██▒▒▒▒▒▒▒▒▒▒▒▒██──────────")
-                         print("──────────████████████▒▒▒▒██────────")
-                         print("────────██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██──────")
-                         print("──────██▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒██────")
-                         print("────██▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒██──")
-                         print("──██▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒██")
-                         print("██▓▓▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒██")
-                         print("██▓▓▒▒▓▓▒▒▒▒▒▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒██")
-                         print("██▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓██")
-                         print("──████▐▌▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐▌▐▌████──")
-                         print("────██▐▌▐▌▌▌▌▌▌▌▌▌▐▌▐▌▐▌▐▌▌▌▐▌██────")
-                         print("────██▌▌▐▌▐▌▌▌▐▌▌▌▌▌▐▌▌▌▌▌▌▌▌▌██────")
-                         print("──────██▌▌▐▌▐▌▐▌▐▌▐▌▐▌▐▌▌▌▌▌██──────")
-                         print("──────██▐▌▐▌▐▌████████▐▌▌▌▌▌██──────")
-                         print("────────██▒▒██────────██▒▒██────────")
-                         print("────────██████────────██████────────")
-
-                    if(palabra_secreta == "ballena"):
-                         print("─────▀▄▀─────▄─────▄")
-                         print("──▄███████▄──▀██▄██▀")
-                         print("▄█████▀█████▄──▄█")
-                         print("███████▀████████▀")
-                         print("─▄▄▄▄▄▄███████▀")
-                    break    
-                  
-                else:
-                    intentos -= 1
-                    print("Incorrecto.")
-                    print(f"Te quedan {intentos} intentos.")
-                
-                # Verificar si el jugador perdió o no adivinó ninguna letra en esta vuelta
-                if len(letras_adivinadas) == 0:
-                    continue
-                
-
-                if intentos == 0:
-                    print(f"¡Has perdido! La palabra secreta era: {palabra_secreta}")
-                    perdiste = perdiste + 1
-                    break
-
-                # Validar si ganó e ir imprimiendo 
-                palabra_secreta_intento = ""
-                
-                for letra in palabra_secreta:
-                    if letra in letras_adivinadas:
-                        palabra_secreta_intento += letra
-                        print(f"{letra} ", end= "")
                     else:
-                        palabra_secreta_intento += "_"
-                        print(f"_ ", end= "")
-
-                print("\n\n")
-
-                if palabra_secreta_intento == palabra_secreta:
-                    print("¡Felicidades! ¡Has ganado!")
-                    adivinaste = adivinaste + 1
+                        intentos -= 1
+                        print("Incorrecto.")
+                        print(f"Te quedan {intentos} intentos.")
                     
-                    if (palabra_secreta == "perro"):
-                        print("░░░░░░▄█▄█░░░░░▄░░░░░░")
-                        print("░░░░██████░░░░░░█░░░░░")
-                        print("░░░░░░███████████░░░░░")
-                        print("▒▒▒▒▒▒█▀▀█▀▀██▀██▒▒▒▒▒")
-                        print("▒▒▒▒▒▄█▒▄█▒▒▄█▒▄█▒▒▒▒▒")
+                    # Verificar si el jugador perdió o no adivinó ninguna letra en esta vuelta
+                    if len(letras_adivinadas) == 0:
+                        continue
                     
-                    if (palabra_secreta == "gato"):
-                        print("░░░▄▀▌░▄▀▌░░░░░░░░░░░░")
-                        print("░▄██▀▀▀█▀▀▀▄╔╦╗╔╗╔╗╗╗╗")
-                        print("▐███░▐░█░▐░█║║║╠╝║║║║║")
-                        print("███████╥████╝╝╝╚╝╚╝╩╩╝")
-                        print("█████╚═╩═╝██░░░░░░░░░░")
-                    
-                    if (palabra_secreta == "llave"):
-                        print("──▄▀▀▀▄───────────────")
-                        print("──█───█───────────────")
-                        print("─███████─────────▄▀▀▄─")
-                        print("░██─▀─██░░█▀█▀▀▀▀█░░█░")
-                        print("░███▄███░░▀░▀░░░░░▀▀░░")
 
-                    if (palabra_secreta == "corazon"):
-                        print("─────▄█▀█▄──▄███▄────❤")
-                        print("────▐█░██████████▌────")
-                        print("─────██▒█████████─────")
-                        print("──────▀████████▀──────")
-                        print("─────────▀██▀─────────")
-                    
-                    if (palabra_secreta == "patricio_estrella"):
-                         print ("────────────────────██████──────────")
-                         print("──────────────────██▓▓▓▓▓▓██────────")
-                         print("────────────────██▓▓▓▓▒▒▒▒██────────")
-                         print("────────────────██▓▓▒▒▒▒▒▒██────────")
-                         print("──────────────██▓▓▓▓▒▒▒▒██──────────")
-                         print("──────────────██▓▓▒▒▒▒▒▒██──────────")
-                         print("────────────██▓▓▓▓▒▒▒▒▒▒██──────────")
-                         print("────────────████▒▒████▒▒██──────────")
-                         print("────────────██▓▓▒▒▒▒▒▒▒▒██──────────")
-                         print("──────────██────▒▒────▒▒██──────────")
-                         print("──────────████──▒▒██──▒▒██──────────")
-                         print("─────────██────▒▒────▒▒██──────────")
-                         print("──────────██▒▒▒▒▒▒▒▒▒▒▒▒██──────────")
-                         print("──────────████████████▒▒▒▒██────────")
-                         print("────────██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██──────")
-                         print("──────██▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒██────")
-                         print("────██▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒██──")
-                         print("──██▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒██")
-                         print("██▓▓▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒██")
-                         print("██▓▓▒▒▓▓▒▒▒▒▒▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒██")
-                         print("██▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓██")
-                         print("──████▐▌▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐▌▐▌████──")
-                         print("────██▐▌▐▌▌▌▌▌▌▌▌▌▐▌▐▌▐▌▐▌▌▌▐▌██────")
-                         print("────██▌▌▐▌▐▌▌▌▐▌▌▌▌▌▐▌▌▌▌▌▌▌▌▌██────")
-                         print("──────██▌▌▐▌▐▌▐▌▐▌▐▌▐▌▐▌▌▌▌▌██──────")
-                         print("──────██▐▌▐▌▐▌████████▐▌▌▌▌▌██──────")
-                         print("────────██▒▒██────────██▒▒██────────")
-                         print("────────██████────────██████────────")
+                    if intentos == 0:
+                        print(f"¡Has perdido! La palabra secreta era: {palabra_secreta}")
+                        perdiste = perdiste + 1
+                        break
 
-                    if(palabra_secreta == "ballena"):
-                         print("─────▀▄▀─────▄─────▄")
-                         print("──▄███████▄──▀██▄██▀")
-                         print("▄█████▀█████▄──▄█")
-                         print("███████▀████████▀")
-                         print("─▄▄▄▄▄▄███████▀")
-                    break
+                    # Validar si ganó e ir imprimiendo 
+                    palabra_secreta_intento = ""
+                    
+                    for letra in palabra_secreta:
+                        if letra in letras_adivinadas or letra == " ":
+                            palabra_secreta_intento += letra
+                            print(f"{letra} ", end= "")
+                        else:
+                            palabra_secreta_intento += "_"
+                            print(f"_ ", end= "")
+
+                    print("\n\n")
+
+                    if palabra_secreta_intento == palabra_secreta or letra_usuario == palabra_secreta :
+                        print("¡Felicidades! ¡Has ganado!")
+                        adivinaste = adivinaste + 1
+                        palabras.remove(palabra_secreta)
+
+                        if (palabra_secreta == "perro"):
+                            print("░░░░░░▄█▄█░░░░░▄░░░░░░")
+                            print("░░░░██████░░░░░░█░░░░░")
+                            print("░░░░░░███████████░░░░░")
+                            print("▒▒▒▒▒▒█▀▀█▀▀██▀██▒▒▒▒▒")
+                            print("▒▒▒▒▒▄█▒▄█▒▒▄█▒▄█▒▒▒▒▒")
+                        
+                        if (palabra_secreta == "gato"):
+                            print("░░░▄▀▌░▄▀▌░░░░░░░░░░░░")
+                            print("░▄██▀▀▀█▀▀▀▄╔╦╗╔╗╔╗╗╗╗")
+                            print("▐███░▐░█░▐░█║║║╠╝║║║║║")
+                            print("███████╥████╝╝╝╚╝╚╝╩╩╝")
+                            print("█████╚═╩═╝██░░░░░░░░░░")
+                        
+                        if (palabra_secreta == "llave"):
+                            print("──▄▀▀▀▄───────────────")
+                            print("──█───█───────────────")
+                            print("─███████─────────▄▀▀▄─")
+                            print("░██─▀─██░░█▀█▀▀▀▀█░░█░")
+                            print("░███▄███░░▀░▀░░░░░▀▀░░")
+
+                        if (palabra_secreta == "corazon"):
+                            print("─────▄█▀█▄──▄███▄────❤")
+                            print("────▐█░██████████▌────")
+                            print("─────██▒█████████─────")
+                            print("──────▀████████▀──────")
+                            print("─────────▀██▀─────────")
+                        
+                        if (palabra_secreta == "patricio estrella"):
+                            print ("────────────────────██████──────────")
+                            print("──────────────────██▓▓▓▓▓▓██────────")
+                            print("────────────────██▓▓▓▓▒▒▒▒██────────")
+                            print("────────────────██▓▓▒▒▒▒▒▒██────────")
+                            print("──────────────██▓▓▓▓▒▒▒▒██──────────")
+                            print("──────────────██▓▓▒▒▒▒▒▒██──────────")
+                            print("────────────██▓▓▓▓▒▒▒▒▒▒██──────────")
+                            print("────────────████▒▒████▒▒██──────────")
+                            print("────────────██▓▓▒▒▒▒▒▒▒▒██──────────")
+                            print("──────────██────▒▒────▒▒██──────────")
+                            print("──────────████──▒▒██──▒▒██──────────")
+                            print("─────────██────▒▒────▒▒██──────────")
+                            print("──────────██▒▒▒▒▒▒▒▒▒▒▒▒██──────────")
+                            print("──────────████████████▒▒▒▒██────────")
+                            print("────────██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██──────")
+                            print("──────██▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒██────")
+                            print("────██▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒██──")
+                            print("──██▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒██")
+                            print("██▓▓▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒██")
+                            print("██▓▓▒▒▓▓▒▒▒▒▒▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒██")
+                            print("██▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓██")
+                            print("──████▐▌▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐▌▐▌████──")
+                            print("────██▐▌▐▌▌▌▌▌▌▌▌▌▐▌▐▌▐▌▐▌▌▌▐▌██────")
+                            print("────██▌▌▐▌▐▌▌▌▐▌▌▌▌▌▐▌▌▌▌▌▌▌▌▌██────")
+                            print("──────██▌▌▐▌▐▌▐▌▐▌▐▌▐▌▐▌▌▌▌▌██──────")
+                            print("──────██▐▌▐▌▐▌████████▐▌▌▌▌▌██──────")
+                            print("────────██▒▒██────────██▒▒██────────")
+                            print("────────██████────────██████────────")
+
+                        if(palabra_secreta == "ballena"):
+                            print("─────▀▄▀─────▄─────▄")
+                            print("──▄███████▄──▀██▄██▀")
+                            print("▄█████▀█████▄──▄█")
+                            print("███████▀████████▀")
+                            print("─▄▄▄▄▄▄███████▀")
+                        break
         
                                          
     elif(user_option == 2):
