@@ -3,7 +3,7 @@ adivinaste = 0
 palabra_singular = "palabra"
 perdiste = 0
 user_option = ""
-palabras = ["perro", "gato","llave","corazon","patricio estrella","ballena","caracol","cangrejo","pikachu","trofeo","homero simpson"]
+palabras = ["perro", "gato","llave","corazon","patricio estrella","ballena","caracol","cangrejo","pikachu","trofeo","homero simpson","reloj"]
 
 nombre = input ("¿Como te llamas?\n")
 print (f"¡Hola {nombre}! Es hora de jugar a las adivinanzas.\n")
@@ -20,9 +20,12 @@ while (user_option != 3):
     if (user_option == 1):
             print("Tienes la opción de ingresar la palabra completa o adivinando las letras: ¡Tienes 6 intentos! ¡Suerte! ")
             if len(palabras) == 0:
-                 print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-                 print ("¡Felicidades! ¡Las adivinaste todas!  ")
-                 print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                print("     __^__                     __^__  ")
+                print("    ( ___ )-------------------( ___ ) ")
+                print("     | / |   ¡Felicidades!     | / |  ")
+                print("     | / |     Le acertaste    | / |  ")
+                print("     |___|           a todas.  |___|  ")
+                print("    (_____)-------------------(_____) ")
             
             else:
                 print (f"Te quedan {len (palabras)} palabras por adivinar.")
@@ -30,7 +33,6 @@ while (user_option != 3):
                 intentos = 6
                 letras_adivinadas = []
 
-                
                 if(palabra_secreta == "perro"):
                     print ("________________________________________ ")
                     print ("|Tiene patas, pero no puede caminar,    |")
@@ -106,6 +108,14 @@ while (user_option != 3):
                     print("|Con su lema '¡D'oh!' es famoso por su error,          |")
                     print("|¿quién es este padre de familia con mucho humor?      |")
                     print("________________________________________________________")
+
+                elif(palabra_secreta == "reloj"):
+                    print("___________________________________________________")
+                    print("|Pequeño dispositivo de gran precisión,            |")
+                    print("|con sus manecillas marca la ocasión.              |")
+                    print("|Cronometra segundos, minutos y horas,             |")
+                    print("|y en su tic-tac el tiempo se desliza sin demoras. |")
+                    print("|__________________________________________________|")
                     
                 # Primer print con estado de la adivinanza
                 print("_ " * len(palabra_secreta))
@@ -136,12 +146,11 @@ while (user_option != 3):
                     if len(letras_adivinadas) == 0:
                         continue
                     
-
                     if intentos == 0:
                         print(f"¡Has perdido! La palabra secreta era: {palabra_secreta}")
                         perdiste = perdiste + 1
                         break
-
+                    
                     # Validar si ganó e ir imprimiendo 
                     palabra_secreta_intento = ""
                     
@@ -320,10 +329,48 @@ while (user_option != 3):
                            print("░░░░██▀█▄░▀█▄░▀▀████▀▀██░░░░░░")
                            print("░░░░█░░░▀▀█▄▀█▄▄▄▄▄▄▄▄██▄░░░░")
 
+                        if (palabra_secreta == "reloj"):
+                           print("__________________________________________________")
+                           print("_______¶¶¶¶¶___________________________¶¶¶¶_______")
+                           print("______¶¶___¶¶¶¶¶¶¶______________¶¶¶¶¶¶¶¶__¶¶______")
+                           print("______¶¶¶________¶¶¶__________¶¶¶¶______¶__¶______")
+                           print("_____¶¶____________¶¶________¶¶___________¶¶¶_____")
+                           print("____¶¶____________¶¶¶_______¶¶¶_____________¶¶____")
+                           print("___¶¶_________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶__________¶¶____")
+                           print("___¶¶______¶¶_¶¶¶¶_____________¶¶¶¶¶_________¶____")
+                           print("____¶¶__¶¶¶¶¶________________________¶¶¶____¶¶____")
+                           print("____¶¶¶¶¶¶¶¶_____¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶____¶¶¶¶¶¶¶_____")
+                           print("_______¶¶¶____¶¶¶_______¶¶_______¶¶¶____¶¶¶¶¶_____")
+                           print("______¶¶____¶¶___¶______¶¶______¶__¶¶¶____¶¶______")
+                           print("_____¶¶___¶¶_____¶¶____________¶¶____¶¶¶___¶¶_____")
+                           print("____¶¶___¶_____________________________¶¶___¶¶____")
+                           print("___¶¶___¶__¶____________¶¶___________¶__¶¶___¶¶___")
+                           print("__¶¶___¶____¶___________¶¶__________¶____¶¶___¶___")
+                           print("__¶¶__¶¶________________¶¶________________¶___¶¶__")
+                           print("__¶___¶_________________¶¶_________________¶__¶¶__")
+                           print("_¶¶___¶_________________¶¶_________________¶___¶¶_")
+                           print("_¶¶___¶_¶¶¶¶¶___________¶¶¶¶¶¶_______¶¶¶¶¶_¶___¶¶_")
+                           print("_¶¶___¶____________________________________¶___¶¶_")
+                           print("__¶___¶____________________________________¶___¶__")
+                           print("__¶¶__¶¶__________________________________¶___¶¶__")
+                           print("__¶¶___¶____¶_______________________¶_____¶___¶¶__")
+                           print("___¶¶___¶__¶_________________________¶___¶___¶¶___")
+                           print("____¶____¶______________________________¶___¶¶____")
+                           print("____¶¶____¶______¶______¶¶______¶_____¶¶___¶¶_____")
+                           print("_____¶¶¶___¶¶___¶_______¶¶_______¶__¶¶¶___¶¶______")
+                           print("_______¶¶___¶¶¶_________¶¶________¶¶¶____¶¶_______")
+                           print("________¶¶¶___¶¶¶¶¶¶__________¶¶¶¶¶___¶¶¶_________")
+                           print("_______¶¶¶__¶¶_____¶¶¶¶¶¶¶¶¶¶¶¶_____¶¶_¶¶_________")
+                           print("______¶¶_______¶¶________________¶¶_____¶¶________")
+                           print("______¶¶_______¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶________¶________")
+                           print("______¶¶¶______¶¶_______________¶¶______¶¶________")
+                           print("________¶¶¶¶¶¶¶¶_________________¶¶¶¶¶¶¶¶_________")
+
+
+
 
                         break
-        
-                                         
+                                     
     elif(user_option == 2):
             print("[Tus resultados]\n")
             
@@ -335,8 +382,6 @@ while (user_option != 3):
             print(f"No lo lograste: {perdiste} veces.\n")
             
             input ("presiona enter para continuar:")
-                    
-
                     
     elif(user_option == 3):
             print ("¡Gracias por jugar!")

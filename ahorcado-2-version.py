@@ -48,6 +48,7 @@ while True:
     print("\n\n")
 
     if palabra_secreta_intento == palabra_secreta:
+
        
         
         print (" _______________$$$$$$$________$$$$$$$$$   ")
@@ -102,3 +103,12 @@ while True:
         print("_________$$$$$$$$$$__________________________$$_$_$$$$$$$$")
     
         break
+
+
+print("     __^__                     __^__  ")
+print("    ( ___ )-------------------( ___ ) ")
+print("     | / |   ¡Felicidades!     | / |  ")
+print("     | / |     Le acertaste    | / |  ")
+print("     |___|           a todas.  |___|  ")
+print("    (_____)-------------------(_____) ")
+    
