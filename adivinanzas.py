@@ -18,7 +18,10 @@ while (user_option != 3):
     user_option = int (input())
 
     if (user_option == 1):
+            #instrucción del juego
             print("Tienes la opción de ingresar la palabra completa o adivinando las letras: ¡Tienes 6 intentos! ¡Suerte! ")
+            
+            #¡opción si el usuario adivino todas las palabras!
             if len(palabras) == 0:
                 print("     __^__                     __^__  ")
                 print("    ( ___ )-------------------( ___ ) ")
