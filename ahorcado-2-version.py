@@ -105,10 +105,4 @@ while True:
         break
 
 
-print("     __^__                     __^__  ")
-print("    ( ___ )-------------------( ___ ) ")
-print("     | / |   ¡Felicidades!     | / |  ")
-print("     | / |     Le acertaste    | / |  ")
-print("     |___|           a todas.  |___|  ")
-print("    (_____)-------------------(_____) ")
     
